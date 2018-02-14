@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> Code </title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'> 
+
+		<!-- CHOSEN CSS -->    
+		<!--<link rel="stylesheet" href="chosen/docsupport/prism.css">-->
+		<link rel="stylesheet" href="chosen/chosen.css">
+
+		<!-- BOOTSTRAP CSS -->  
+		<link href="bootstrap/bootstrap.css" rel="stylesheet">
+		
+		<!-- ZMENU CSS -->
+        <link href="zmenu/css/ui.zmenu-base.css" type="text/css" rel="stylesheet"/>
+
+		<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+		<link href="css/typography.css" type="text/css" rel="stylesheet"/>
+		<link href="css/icons.css" type="text/css" rel="stylesheet"/>   
+		<link href="css/component-custom.css" type="text/css" rel="stylesheet"/>
+		<link href="css/base.css" type="text/css" rel="stylesheet"/>
+
+		<!-- TOPBAR CSS -->
+		<link href="zoho-components/zoho/topbar/styles/ztopbar-theme.css" type="text/css" rel="stylesheet"/>
+		<link href="zoho-components/zoho/topbar/styles/ztopbar.css" type="text/css" rel="stylesheet"/>
+
+
+		<!-- TOPBAR JS -->
+		<script src="js/jquery.min-1.11.3.js"></script>
+
+		<!-- JQUERY UI JS-->
+		<script src="zoho-components/zoho/topbar/js/ztopbar.js"type="text/javascript"></script>
+		<script src="zoho-components/zoho/topbar/js/en_US.js" type="text/javascript"></script>
+
+		<!-- TOPBAR CONFIG JS -->   
+		<!--        <script src="js/topbar-config.js" type="text/javascript"> </script>    -->
+
+		<!-- MAIN JS -->   
+		<script src="js/main.js" type="text/javascript"> </script>     
+
+		<!-- BOOTSTRAP JS -->
+		<script type="text/javascript" src="bootstrap/bootstrap.js"></script>    
+		
+			<!-- ZMENU -->
+		<script src="zmenu/js/handlebars.runtime-v4.0.5.js" type="text/javascript"> </script>     
+		<script src="zmenu/js/compiledTemplates.js" type="text/javascript"> </script>    
+		<script src="zmenu/js/ZComponents.utils.js" type="text/javascript"> </script> 
+		<script src="zmenu/js/ZPosition.utils.js" type="text/javascript"> </script>
+		<script src="zmenu/js/zmenu.js" type="text/javascript"> </script>   
+
+
+	</head>
+	<body>
+
+		<!----------------------------- SVG ICONS -------------------------->
+		<svg style="display:none"> 
+
+			<!----------------------------- SVG ICONS -------------------------->
+
+			<symbol id="svg-new-icon" viewBox="0 0 16 16"> 
+				<path d="M14.5,6H10V1.5A1.5,1.5,0,0,0,8.5,0h-1A1.5,1.5,0,0,0,6,1.5V6H1.5A1.5,1.5,0,0,0,0,7.5v1A1.5,1.5,0,0,0,1.5,10H6v4.5A1.5,1.5,0,0,0,7.5,16h1A1.5,1.5,0,0,0,10,14.5V10h4.5A1.5,1.5,0,0,0,16,8.5v-1A1.5,1.5,0,0,0,14.5,6ZM15,8.5a0.5,0.5,0,0,1-.5.5H9v5.5a0.5,0.5,0,0,1-.5.5h-1A0.5,0.5,0,0,1,7,14.5V9H1.5A0.5,0.5,0,0,1,1,8.5v-1A0.5,0.5,0,0,1,1.5,7H7V1.5A0.5,0.5,0,0,1,7.5,1h1a0.5,0.5,0,0,1,.5.5V7h5.5a0.5,0.5,0,0,1,.5.5v1Z"/>
+			</symbol>
+
+			<symbol id="svg-dashboard-icon" viewBox="0 0 16 16">  
+				<path   d="M10.09,8.59L11.72,4,7.19,6.38a1.91,1.91,0,0,0-.51.39,2,2,0,0,0,.21,2.81,2,2,0,0,0,2.78-.15A3.07,3.07,0,0,0,10.09,8.59ZM7.4,9a1.17,1.17,0,0,1-.12-1.65,1.26,1.26,0,0,1,.3-0.22l3-1.85L9.29,8.34a2.89,2.89,0,0,1-.28.6A1.11,1.11,0,0,1,7.4,9ZM8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15V14.43a0.5,0.5,0,0,0-1,0v0.49A7,7,0,0,1,1.08,9H1.5a0.5,0.5,0,0,0,0-1H1A7,7,0,0,1,7,1.08V1.5a0.5,0.5,0,0,0,1,0V1a7,7,0,0,1,7,7H14.5a0.5,0.5,0,0,0-.5.5h0a0.5,0.5,0,0,0,.5.5h0.42A7,7,0,0,1,8,15Z"/>
+			</symbol>
+
+			<symbol id="svg-project-icon"  viewBox="0 0 16 16">
+				<path d="M12,3a1,1,0,0,0-1-1H10A2,2,0,0,0,6,2H5A1,1,0,0,0,4,3,2,2,0,0,0,2,5v9a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V5A2,2,0,0,0,12,3ZM8,1A1,1,0,1,1,7,2,1,1,0,0,1,8,1Zm5,13a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1V5A1,1,0,0,1,4,4h8a1,1,0,0,1,1,1v9ZM7.5,7h-3A0.5,0.5,0,0,1,4,6.5H4A0.5,0.5,0,0,1,4.5,6h3a0.5,0.5,0,0,1,.5.5H8A0.5,0.5,0,0,1,7.5,7Zm4,2h-7A0.5,0.5,0,0,1,4,8.5H4A0.5,0.5,0,0,1,4.5,8h7a0.5,0.5,0,0,1,.5.5h0A0.5,0.5,0,0,1,11.5,9Zm-1,2h-6A0.5,0.5,0,0,1,4,10.5H4A0.5,0.5,0,0,1,4.5,10h6a0.5,0.5,0,0,1,.5.5h0A0.5,0.5,0,0,1,10.5,11Zm-1,2h-5A0.5,0.5,0,0,1,4,12.5H4A0.5,0.5,0,0,1,4.5,12h5a0.5,0.5,0,0,1,.5.5h0A0.5,0.5,0,0,1,9.5,13Z"/>
+			</symbol>
+
+			<symbol id="svg-repositories-icon" viewBox="0 0 16 16">        
+				<path  d="M5,4A1,1,0,1,0,4,5,1,1,0,0,0,5,4Zm8,0h0a0.5,0.5,0,0,0-.5-0.5h-4A0.5,0.5,0,0,0,8,4H8a0.5,0.5,0,0,0,.5.5h4A0.5,0.5,0,0,0,13,4ZM5,12a1,1,0,1,0-1,1A1,1,0,0,0,5,12Zm8,0h0a0.5,0.5,0,0,0-.5-0.5h-4A0.5,0.5,0,0,0,8,12H8a0.5,0.5,0,0,0,.5.5h4A0.5,0.5,0,0,0,13,12ZM0,5V3A2,2,0,0,1,2,1H14a2,2,0,0,1,2,2V5a2,2,0,0,1-2,2H2A2,2,0,0,1,0,5ZM2,6H14a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H2A1,1,0,0,0,1,3V5A1,1,0,0,0,2,6ZM0,13V11A2,2,0,0,1,2,9H14a2,2,0,0,1,2,2v2a2,2,0,0,1-2,2H2A2,2,0,0,1,0,13Zm2,1H14a1,1,0,0,0,1-1V11a1,1,0,0,0-1-1H2a1,1,0,0,0-1,1v2A1,1,0,0,0,2,14Z"/>
+			</symbol>
+
+			<symbol id="svg-close-icon"  viewBox="0 0 14 14"> 
+				<polygon points="13.6,1.6 12.4,0.4 7,5.8 1.6,0.4 0.4,1.6 5.8,7 0.4,12.4 1.6,13.6 7,8.2 12.4,13.6 13.6,12.4 8.2,7 "></polygon>
+			</symbol>
+
+			<symbol id="svg-help-icon"  viewBox="0 0 16 16">
+				<path  d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15a7,7,0,1,1,7-7A7,7,0,0,1,8,15Zm0.42-2.81a0.82,0.82,0,1,1-.82-0.82A0.82,0.82,0,0,1,8.42,12.19ZM8,3.15a2.85,2.85,0,0,0-2,.9,0.49,0.49,0,1,0,.7.69A1.88,1.88,0,0,1,8,4.13,1.91,1.91,0,0,1,9.9,6,2.2,2.2,0,0,1,7.75,7.91C7.25,7.91,7,8,7,8.4v1.78a0.5,0.5,0,0,0,1,0V8.85C10,8.61,10.79,7.4,10.79,6A2.81,2.81,0,0,0,8,3.15Z"/>
+			</symbol>
+
+			<symbol id="svg-info-icon"  viewBox="0 0 16 16">
+				<path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15a7,7,0,1,1,7-7A7,7,0,0,1,8,15Zm1-3a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V7A1,1,0,0,1,8,6H8A1,1,0,0,1,9,7v5ZM9,4A1,1,0,1,1,8,3,1,1,0,0,1,9,4Z"/>
+			</symbol>
+
+			<symbol id="svg-github-icon"  viewBox="0 0 438.549 438.549"> 
+				<path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365   c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63   c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996   c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136   c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559   c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559   c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997   c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851   c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136   c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41   c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126   c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817   c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994   c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849   c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24   c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979   c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146   c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995   c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906   C438.536,184.851,428.728,148.168,409.132,114.573z" />
+			</symbol>
+
+			<symbol id="svg-bitbucket-icon"  viewBox="0 0  465.27 465.269">
+				<path d="M377.309,326.631c-42.633,28.165-90.938,42.254-144.896,42.254c-53.959,0-102.164-14.089-144.608-42.254l-5.14,2.566    l-1.714,4.569c6.091,37.305,11.515,65.093,16.274,83.367c3.809,6.659,8.757,12.518,14.849,17.562    c6.09,5.037,13.035,9.182,20.839,12.419c7.804,3.233,15.086,5.801,21.842,7.703c6.757,1.906,14.512,3.614,23.269,5.144    c19.604,3.237,38.778,4.996,57.526,5.28c18.754,0.287,37.973-1.811,57.674-6.279c19.701-4.47,37.736-11.276,54.101-20.41    c6.852-3.812,12.371-9.192,16.563-16.132c4.182-6.947,6.896-13.613,8.131-19.985c1.239-6.376,2.574-14.373,4.001-23.986    c1.434-9.609,2.905-16.888,4.432-21.837c0-1.714,0.767-5.239,2.282-10.564c1.517-5.328,1.995-9.612,1.428-12.847    C383.592,329.958,381.306,327.771,377.309,326.631z" />
+				<path d="M428.99,52.258c-11.424-14.462-31.888-26.072-61.387-34.829C311.069,0.868,246.732-3.891,174.599,3.154    c-35.779,3.424-65.565,9.513-89.359,18.271c-5.712,2.093-10.278,3.852-13.706,5.28c-3.427,1.427-7.802,3.568-13.134,6.424    c-5.33,2.855-9.615,5.71-12.851,8.565c-3.234,2.853-6.23,6.422-8.992,10.705s-4.425,8.897-4.996,13.846    c1.709,13.706,3.802,28.741,6.28,45.111c2.478,16.368,4.712,30.406,6.71,42.111c1.997,11.704,4.661,27.073,7.993,46.108    c3.333,19.036,5.852,33.313,7.566,42.827c0.381,1.715,0.903,5.041,1.569,9.993c0.667,4.951,1.237,8.712,1.714,11.279    c0.476,2.573,1.332,5.811,2.568,9.712c1.237,3.908,2.856,7.234,4.854,9.996c2,2.758,4.425,5.287,7.281,7.562    c27.79,21.32,65.286,34.547,112.488,39.688c68.138,7.228,126.199-1.14,174.161-25.126c6.279-3.23,11.461-6.181,15.554-8.846    c4.093-2.67,8.24-6.476,12.422-11.424c4.186-4.948,6.756-10.276,7.707-15.984c16.18-92.89,26.741-155.225,31.689-187.011    c1.143-4.377,1.663-9.517,1.581-15.418C433.61,60.921,432.029,56.063,428.99,52.258z M281.656,263.814    c-11.615,14.466-26.081,22.457-43.402,23.986c-17.507,1.522-33.254-3.806-47.244-15.988c-13.99-12.18-21.366-26.933-22.126-44.255    c-0.572-13.134,2.712-25.458,9.851-36.973s16.702-19.936,28.693-25.266c18.653-8.376,37.396-7.139,56.239,3.711    c18.842,10.849,29.602,26.457,32.264,46.824C298.027,233.364,293.274,249.349,281.656,263.814z M342.755,74.387    c-8.757,3.33-15.656,5.376-20.693,6.136c-5.045,0.761-13.559,1.903-25.55,3.432c-41.881,5.325-84.516,5.231-127.909-0.287    c-11.42-1.333-19.748-2.43-24.982-3.289c-5.232-0.854-12.227-2.947-20.984-6.28c-8.757-3.332-15.99-7.659-21.698-12.991    c3.427-4.947,8.186-9.04,14.277-12.275c6.089-3.234,11.325-5.327,15.702-6.28s10.66-2.094,18.843-3.427    c52.344-9.327,106.208-9.517,161.596-0.57c9.329,1.523,16.085,2.712,20.273,3.569c4.188,0.855,9.705,2.952,16.556,6.28    c6.852,3.33,12.187,7.566,15.988,12.703C358.654,66.629,351.513,71.06,342.755,74.387z" />
+				<path d="M256.39,202.575c-5.232-5.617-11.327-8.995-18.272-10.138c-6.945-1.141-13.841,0-20.695,3.427    c-7.233,3.236-12.181,8.754-14.849,16.558c-2.663,7.804-2.618,15.609,0.144,23.417c2.762,7.803,7.851,13.322,15.275,16.557    c10.087,6.095,20.692,5.52,31.834-1.712c11.133-7.228,15.94-16.844,14.414-28.835C264.24,214.616,261.619,208.192,256.39,202.575z    " />
+			</symbol>
+
+			<symbol id="svg-gitrepositories-icon"  viewBox="-200 100 1024 768"> 
+				<path d="M320 256h-64v64h64v-64z m0-128h-64v64h64v-64z m384-128c-32 0-608 0-640 0s-64 32-64 64 0 736 0 768 32 64 64 64 128 0 128 0v128l96-96 96 96v-128s288 0 320 0 64-32 64-64 0-736 0-768-32-64-64-64z m0 800c0 16-15 32-32 32s-288 0-288 0v-64h-192v64s-79 0-96 0-32-17-32-32 0-96 0-96h640s0 80 0 96z m0-160h-512v-576h513l-1 576z m-384-128h-64v64h64v-64z m0-128h-64v64h64v-64z" />
+			</symbol>
+
+			<symbol id="svg-otherrep-icon"  viewBox="0 0 16 16">
+				<path d="M13,10a2,2,0,1,1,2-2A2,2,0,0,1,13,10Zm0-3.2A1.2,1.2,0,1,0,14.2,8,1.2,1.2,0,0,0,13,6.8ZM8,10a2,2,0,1,1,2-2A2,2,0,0,1,8,10ZM8,6.8A1.2,1.2,0,1,0,9.2,8,1.2,1.2,0,0,0,8,6.8ZM3,10A2,2,0,1,1,5,8,2,2,0,0,1,3,10ZM3,6.8A1.2,1.2,0,1,0,4.2,8,1.2,1.2,0,0,0,3,6.8Z"/></symbol>
+
+			<symbol id="svg-sort-icon" viewBox="0 0 20 20">
+				<polygon  points="12,4 12,6 17.5,6 12,13.2 12,15 20,15 20,13 14.3,13 20,5.8 20,4 "/>
+				<polygon  points="8,17 13,17 10.5,20 "/>
+				<polygon  points="8,3 13,3 10.5,0 "/>
+				<path d="M4,4H6l4,11H8.1l-0.8-2l-4.5,0L2,15l-2,0L4,4z M3.4,11h3.2L5,5.9L3.4,11z"/>
+			</symbol> 
+
+			<symbol id="svg-search-icon" viewBox="0 0 20 20">
+				<path d="M18.7,17.3l-6.1-6.1c0.8-1,1.2-2.3,1.2-3.7c0-3.5-2.8-6.4-6.3-6.4S1.2,4,1.2,7.5c0,3.5,2.8,6.4,6.3,6.4
+						 c1.4,0,2.7-0.5,3.7-1.2l6.1,6.1L18.7,17.3z M2.8,7.5c0-2.6,2.1-4.7,4.7-4.7s4.7,2.1,4.7,4.7s-2.1,4.7-4.7,4.7S2.8,10.1,2.8,7.5z"/>
+			</symbol>
+
+			<symbol id="svg-folder-icon"  viewBox="0 0 16 16">
+				<path d="M13.5,15H2.5A2.5,2.5,0,0,1,0,12.5v-9A2.5,2.5,0,0,1,2.5,1H4.89a2,2,0,0,1,1.42.59L7.12,2.41A2,2,0,0,0,8.54,3h5A2.5,2.5,0,0,1,16,5.5v7A2.5,2.5,0,0,1,13.5,15Zm-11-1h11A1.5,1.5,0,0,0,15,12.5v-7A1.5,1.5,0,0,0,13.5,4H8.13a2,2,0,0,1-1.42-.6L5.89,2.56A2,2,0,0,0,4.47,2h-2A1.5,1.5,0,0,0,1,3.46v9A1.5,1.5,0,0,0,2.49,14Z"/>
+			</symbol>
+
+			<symbol id="svg-file-icon"  viewBox="0 0 16 16">
+				<path d="M4.5,6h2a0.5,0.5,0,1,0,0-1h-2A0.5,0.5,0,0,0,4.5,6Zm5,5H4.51a0.5,0.5,0,0,0,0,1H9.46A0.5,0.5,0,1,0,9.46,11ZM4,8.5a0.5,0.5,0,0,0,.5.5h7a0.5,0.5,0,0,0,0-1h-7A0.5,0.5,0,0,0,4,8.5Zm6.67-8.29A0.53,0.53,0,0,0,10.26,0H4.5A2.5,2.5,0,0,0,2,2.5v11A2.5,2.5,0,0,0,4.5,16h7A2.5,2.5,0,0,0,14,13.5V3.63ZM13,13.5A1.5,1.5,0,0,1,11.5,15h-7A1.5,1.5,0,0,1,3,13.5V2.5A1.5,1.5,0,0,1,4.5,1H9V3.5A1.5,1.5,0,0,0,10.51,5H13V13.5ZM10,4V1l3,3H10Z"/>
+			</symbol>
+
+			<symbol id="svg-edit-icon" viewBox="0 0 512 512">
+				<path d="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z"/>
+			</symbol>
+
+			<symbol id="svg-rep-icon" viewBox="0 0 16 16"> 
+				<path d="M1.000,15.000 L1.000,10.000 L15.000,10.000 L15.000,15.000 L1.000,15.000 ZM14.000,11.000 L2.000,11.000 L2.000,14.000 L14.000,14.000 L14.000,11.000 ZM4.000,13.000 L3.000,13.000 L3.000,12.000 L4.000,12.000 L4.000,13.000 ZM1.000,3.000 L15.000,3.000 L15.000,8.000 L1.000,8.000 L1.000,3.000 ZM2.000,7.000 L14.000,7.000 L14.000,4.000 L2.000,4.000 L2.000,7.000 ZM3.000,5.000 L4.000,5.000 L4.000,6.000 L3.000,6.000 L3.000,5.000 Z" class="cls-1"/>
+			</symbol>
+
+			<symbol id="svg-favorite-icon"  viewBox="0 0 16 16">
+				<path   d="M11.12,15.18L8.67,13.33a1.13,1.13,0,0,0-1.35,0L4.86,15.13a1.35,1.35,0,0,1-2.09-1.51l0.92-2.8a1.13,1.13,0,0,0-.42-1.28L1,7.92a1.39,1.39,0,0,1,.8-2.52H4.68a1.13,1.13,0,0,0,1.07-.79l1-3a1.35,1.35,0,0,1,2.57,0l1,3a1.13,1.13,0,0,0,1.07.79h3a1.35,1.35,0,0,1,.77,2.46L12.72,9.54a1.13,1.13,0,0,0-.43,1.27l0.93,2.88A1.35,1.35,0,0,1,11.12,15.18Z"/>
+				<path fill="#fff" d="M8.54,12l2.87,2.22a0.53,0.53,0,0,0,.83-0.59l-1-3.42a0.89,0.89,0,0,1,.34-1l2.79-2a0.53,0.53,0,0,0-.3-1H10.5a0.89,0.89,0,0,1-.85-0.62L8.51,2.06a0.53,0.53,0,0,0-1,0L6.35,5.68a0.89,0.89,0,0,1-.85.62H2a0.53,0.53,0,0,0-.3,1l2.81,2a0.89,0.89,0,0,1,.33,1l-1.1,3.35a0.53,0.53,0,0,0,.82.59L7.47,12A0.89,0.89,0,0,1,8.54,12Z"/>
+
+			</symbol>
+
+			<symbol id="svg-projectinfo-icon"  viewBox="0 0 16 16">
+				<path d="M8.000,16.000 C3.582,16.000 -0.000,12.418 -0.000,8.000 C-0.000,3.582 3.582,0.000 8.000,0.000 C12.418,0.000 16.000,3.582 16.000,8.000 C16.000,12.418 12.418,16.000 8.000,16.000 ZM8.000,1.000 C4.134,1.000 1.000,4.134 1.000,8.000 C1.000,11.866 4.134,15.000 8.000,15.000 C11.866,15.000 15.000,11.866 15.000,8.000 C15.000,4.134 11.866,1.000 8.000,1.000 ZM7.000,6.000 L9.000,6.000 L9.000,12.000 L7.000,12.000 L7.000,6.000 ZM7.000,4.000 L9.000,4.000 L9.000,5.000 L7.000,5.000 L7.000,4.000 Z"/>
+			</symbol>
+
+			<symbol id="svg-source-icon"  viewBox="0 0 16 16">
+				<path   d="M7,12.5a0.5,0.5,0,0,1-.5.5h-3a0.5,0.5,0,0,1,0-1h3A0.5,0.5,0,0,1,7,12.5ZM3.5,9h2a0.5,0.5,0,0,0,0-1h-2A0.5,0.5,0,0,0,3.5,9ZM3,10.5a0.5,0.5,0,0,0,.5.5h5a0.5,0.5,0,0,0,0-1h-5A0.5,0.5,0,0,0,3,10.5ZM15,2.61V10.5A2.5,2.5,0,0,1,12.5,13H11v0.5A2.5,2.5,0,0,1,8.5,16h-5A2.5,2.5,0,0,1,1,13.5v-8A2.5,2.5,0,0,1,3.5,3H8.3a0.4,0.4,0,0,1,.32.16L11,5.61V12h1.5A1.5,1.5,0,0,0,14,10.5V4H12a1,1,0,0,1-1-1V1H7.5A1.5,1.5,0,0,0,6,2.5V3H5V2.5A2.5,2.5,0,0,1,7.5,0h4.8a0.4,0.4,0,0,1,.32.16ZM10,7H8A1,1,0,0,1,7,6V4H3.5A1.5,1.5,0,0,0,2,5.5v8A1.5,1.5,0,0,0,3.5,15h5A1.5,1.5,0,0,0,10,13.5V7Zm0-1L8,4V6h2Zm4-3L12,1V3h2Z"/>
+			</symbol>
+
+			<symbol id="svg-share-icon"  viewBox="0 0 16 16">
+				<path d="M11,15H2a2,2,0,0,1-2-2V5A2,2,0,0,1,2,3H7.5a0.5,0.5,0,0,1,0,1H2A1,1,0,0,0,1,5v8a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V10.5a0.5,0.5,0,0,1,1,0V13A2,2,0,0,1,11,15ZM15.85,4.15l-4-4a0.5,0.5,0,0,0-.71.71l3,3C4.18,4,4,11.23,4,11.31a0.5,0.5,0,0,0,.42.57H4.47A0.5,0.5,0,0,0,5,11.45c0-.07.08-6.54,9.45-6.57L11.15,8.15a0.5,0.5,0,1,0,.71.71l4-4A0.5,0.5,0,0,0,15.85,4.15Z"/>
+			</symbol>
+
+			<symbol id="svg-download-icon"  viewBox="0 0 16 16">
+				<path d="M12,15H3a2,2,0,0,1-2-2V8.5a0.5,0.5,0,0,1,1,0V13a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V8.5a0.5,0.5,0,0,1,1,0V13A2,2,0,0,1,12,15ZM8,9.44V1.56a0.5,0.5,0,1,0-1,0V9.44A0.5,0.5,0,1,0,8,9.44ZM7.85,10.85l3-3a0.5,0.5,0,1,0-.71-0.71L7.5,9.79,4.85,7.15a0.5,0.5,0,0,0-.71.71l3,3A0.5,0.5,0,0,0,7.85,10.85Z"/>
+			</symbol>
+
+			<symbol id="svg-delete-icon"  viewBox="0 0 16 16">
+				<path  d="M14.53,4H11V3a1,1,0,0,0-1-1H6A1,1,0,0,0,5,3V4H1.47a0.5,0.5,0,0,0,0,1H3v9a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V5h1.53A0.5,0.5,0,0,0,14.53,4ZM6,3.5A0.5,0.5,0,0,1,6.5,3h3a0.5,0.5,0,0,1,.5.5V4H6V3.5ZM12,14a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5h8v9ZM6.5,14A0.5,0.5,0,0,1,6,13.5v-7a0.5,0.5,0,0,1,1,0v7A0.5,0.5,0,0,1,6.5,14Zm3,0A0.5,0.5,0,0,1,9,13.5v-7a0.5,0.5,0,0,1,1,0v7A0.5,0.5,0,0,1,9.5,14Z"/>
+			</symbol>
+
+			<symbol id="svg-arrowDown-icon" viewBox="0 0 16 16">
+				<path d="M7.5,11a0.5,0.5,0,0,1-.35-0.15l-6-6a0.5,0.5,0,0,1,.71-0.71L7.5,9.79l5.65-5.65a0.5,0.5,0,1,1,.71.71l-6,6A0.5,0.5,0,0,1,7.5,11Z"/>
+			</symbol>
+
+			<symbol id="svg-arrowLeft-icon"  viewBox="0 0 16 16">
+				<path   d="M14.5,8H2.71L6.85,3.85a0.5,0.5,0,0,0-.71-0.71l-5,5a0.5,0.5,0,0,0,0,.71l5,5a0.5,0.5,0,1,0,.71-0.71L2.71,9H14.5A0.5,0.5,0,0,0,14.5,8Z"/>
+			</symbol>
+
+			<symbol id="svg-more-icon" viewBox="0 0 3 16">
+				<rect  width="3" height="3"/>
+				<rect y="6"  width="3" height="3"/>
+				<rect y="13"  width="3" height="3"/>
+			</symbol>
+
+			<symbol id="svg-selectarrow-icon" viewBox="0 0 22 22">
+				<path d="M0.7,6.2C-0.1,5.3,0.5,4,1.7,4h18.7c1.2,0,1.7,1.3,1,2.2l-9.2,11.2c-0.7,0.9-1.5,0.9-2.2,0L0.7,6.2z"/>
+			</symbol>
+			
+					 	<symbol id="svg-notification-icon" viewBox="0 0 16 16">	
+	<path d="M15.41,12.22A17.32,17.32,0,0,1,12.56,4,4.72,4.72,0,0,0,8,0,4.58,4.58,0,0,0,3.42,4.19S3,9.6.87,12.18a0.5,0.5,0,0,0,.38.82H6a2.07,2.07,0,0,0,2,2,2.07,2.07,0,0,0,2-2h5A0.5,0.5,0,0,0,15.41,12.22ZM8,14a1,1,0,0,1-1-1H9A1,1,0,0,1,8,14ZM2.22,12a21.1,21.1,0,0,0,2.2-7.73A3.54,3.54,0,0,1,7.95,1a3.68,3.68,0,0,1,3.62,3.15A20.66,20.66,0,0,0,14.08,12H2.22Z"/> 
+	</symbol>
+		 
+		 
+		<symbol id="svg-settings-icon" viewBox="0 0 16 16">	
+	<path class="a" d="M8,5a3,3,0,1,0,3,3A3,3,0,0,0,8,5Zm0,5a2,2,0,1,1,2-2A2,2,0,0,1,8,10Zm7.47-3.6L14.7,6.21A6.88,6.88,0,0,0,14,4.53l0.41-.68a0.63,0.63,0,0,0,0-.75L12.9,1.59a0.45,0.45,0,0,0-.33-0.13,0.86,0.86,0,0,0-.43.13L11.46,2a6.9,6.9,0,0,0-1.67-.69L9.6,0.53A0.63,0.63,0,0,0,9.07,0H6.93A0.61,0.61,0,0,0,6.4.53l-0.19.78A6.91,6.91,0,0,0,4.54,2L3.85,1.59a0.86,0.86,0,0,0-.43-0.13,0.45,0.45,0,0,0-.33.13L1.59,3.1a0.63,0.63,0,0,0,0,.75L2,4.53a6.87,6.87,0,0,0-.7,1.67L0.53,6.4A0.61,0.61,0,0,0,0,6.93V9.07a0.63,0.63,0,0,0,.53.53L1.3,9.79A6.87,6.87,0,0,0,2,11.47l-0.41.68a0.61,0.61,0,0,0,0,.75L3.1,14.41a0.43,0.43,0,0,0,.32.13,1,1,0,0,0,.44-0.13L4.54,14a6.9,6.9,0,0,0,1.67.69L6.4,15.47a0.61,0.61,0,0,0,.53.53H9.07a0.63,0.63,0,0,0,.53-0.53l0.19-.78A6.9,6.9,0,0,0,11.46,14l0.69,0.41a1,1,0,0,0,.44.13,0.43,0.43,0,0,0,.32-0.13l1.51-1.51a0.61,0.61,0,0,0,0-.75L14,11.47a6.87,6.87,0,0,0,.7-1.67l0.77-.19A0.63,0.63,0,0,0,16,9.07V6.93A0.61,0.61,0,0,0,15.47,6.4ZM15,8.86h0L14.28,9a0.7,0.7,0,0,0-.51.5,5.94,5.94,0,0,1-.6,1.44,0.7,0.7,0,0,0,0,.71l0.39,0.64-1.22,1.22h0l-0.64-.38a0.7,0.7,0,0,0-.71,0,6,6,0,0,1-1.44.6,0.7,0.7,0,0,0-.5.51L8.87,15H7.13L7,14.27a0.7,0.7,0,0,0-.5-0.51A6,6,0,0,1,5,13.17a0.7,0.7,0,0,0-.71,0l-0.64.38h0L2.44,12.34l0.39-.64a0.7,0.7,0,0,0,0-.71,5.92,5.92,0,0,1-.6-1.44A0.7,0.7,0,0,0,1.72,9L1,8.87H1V7.13L1.72,7a0.7,0.7,0,0,0,.51-0.5A5.92,5.92,0,0,1,2.83,5a0.7,0.7,0,0,0,0-.71L2.44,3.67h0L3.66,2.44,4.31,2.83a0.7,0.7,0,0,0,.71,0,5.93,5.93,0,0,1,1.44-.6A0.7,0.7,0,0,0,7,1.73L7.13,1H8.87L9,1.73a0.7,0.7,0,0,0,.5.51,5.93,5.93,0,0,1,1.44.6,0.7,0.7,0,0,0,.71,0l0.65-.39,1.22,1.22h0l-0.38.64a0.7,0.7,0,0,0,0,.71,5.94,5.94,0,0,1,.6,1.44,0.7,0.7,0,0,0,.51.5L15,7.13V8.86Z"/>
+	</symbol>	 
+
+		</svg>	
+
+		<!-------------------------  LOADER ------------------------->
+
+		<div class="zc-loader-overlay" style="display:none"> 
+			<div class="zc-loading-content">
+				<div class="zc-loading-avatar"><span class="zc-avatar avatar-10"> </span> </div>    
+				<div class="zc-loading-title"> <h1> Zoho People  </h1> </div>    
+				<div class="zc-load-msg"> </div>
+				<div class="zc-progress-wrap">
+					<progress max="100" value="0" id="zc-progress-bar"></progress>
+					<div class="zc-load-value"> </div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!------------------------- OVERLAYS & POPUP CONTENT ----------------------->    
+		<div class="zc-overlay">  
+
+		</div>
+
+		<!-- CHOOSE ENVIRONMENT-->
+		<div class="zc-popup-wrap"> 
+			<!--
+<span id="close-popup" class="close-icon">
+<span class="icon" title="Close">
+<svg> <use xlink:href="#svg-close-icon"> </use> </svg>
+</span>  
+</span>  
+-->
+
+			<button id="close-popup" class="zc-btn icon close-icon" title="Close">
+				<i class="icon">
+					<svg class="zc-grey"> <use xlink:href="#svg-close-icon"> </use> </svg>
+				</i>
+			</button>
+
+
+			<div id="choose-environment-popup" class="zc-popup zc-choose-environment">
+
+				<div class="zc-form-wrap">
+					<div class="zc-enviro-title">
+						<h1>Development Environment </h1>
+						<p> Choose a web application framework or language as your development environment. The listed frameworks comes with pre-installed tools and libraries. Also, the related settings to run your project remotely are pre-configured. <a href="#" tabindex="-1">Learn more</a></p>
+					</div>
+
+					<h3> Web Application Framework: </h3>
+
+
+					<div class="zc-environment-list"> 
+						<div id="zc-rails" class="zc-environment">
+							<span class="zc-enviro-logo"> <span class="enviro-logo rails-logo"> </span> </span>
+							<span class="zc-enviro-name">  Rails </span>  
+
+						</div>
+						<div id="zc-django" class="zc-environment selected">
+							<span class="zc-enviro-logo"> <span class="enviro-logo django-logo"> </span> </span>
+							<span class="zc-enviro-name">  Django </span>  
+
+						</div>
+						<div id="zc-tomcat" class="zc-environment">
+							<span class="zc-enviro-logo"> <span class="enviro-logo tomcat-logo"> </span> </span>
+							<span class="zc-enviro-name">  Tomcat </span>    
+
+						</div>
+
+
+						<!--
+</div>
+
+
+
+
+<div class="zc-environment-list"> 
+-->
+						<h3 class="zc-enviro-lang"> Language: </h3>
+
+
+						<div id="zc-java" class="zc-environment">
+							<span class="zc-enviro-logo"> <span class="enviro-logo java-logo"> </span> </span></span>
+						<span class="zc-enviro-name">  Java </span>  
+
+					</div>
+					<div id="zc-ruby" class="zc-environment">
+						<span class="zc-enviro-logo"> <span class="enviro-logo ruby-logo"> </span> </span>
+						<span class="zc-enviro-name">  Ruby </span>
+
+					</div>
+					<div id="zc-go"class="zc-environment">
+						<span class="zc-enviro-logo"> <span class="enviro-logo go-logo"> </span> </span>
+						<span class="zc-enviro-name">  Go </span>    
+
+					</div>
+					<div id="zc-python" class="zc-environment">
+						<span class="zc-enviro-logo"> <span class="enviro-logo python-logo"> </span> </span>
+						<span class="zc-enviro-name">  Python </span>     
+
+					</div>
+				</div>
+
+
+				<div class="zc-row zc-btn-wrap">
+					<button id="create-environment" class="zc-btn">  Done  </button>
+					<button id="cancel-environement" class="zc-btn zc-secondary"> Cancel </button>
+				</div>    
+
+
+			</div>  
+		</div>
+		<div id="choose-repository-popup" class="zc-popup" style="display:none;"> 
+			<div class="zc-tab-wrap zc-cloud-tabs">
+				<ul class="nav nav-tabs" id="chooseCloud">
+					<li><a data-toggle="tab" href="#github"> <span class="icon"><svg> <use xlink:href="#svg-github-icon"> </use> </svg> </span> GitHub</a></li>
+					<li><a data-toggle="tab" href="#bitbucket"> <span class="icon"><svg> <use xlink:href="#svg-bitbucket-icon"> </use> </svg> </span> Bitbucket</a></li>
+					<li><a data-toggle="tab" href="#zohorepository"><span class="icon"><svg> <use xlink:href="#svg-otherrep-icon"> </use> </svg> </span>Other Repository</a></li>
+
+				</ul>
+				<div class="tab-content">
+					<div id="github" class= "tab-pane fade in active">
+						<div id="github-authenticate" >
+							<div class="zc-github-logo"> 
+								<svg> <use xlink:href="#svg-github-icon"> </use> </svg>
+							</div>
+							<div class="zc-github-content">
+								<p>
+									Authenticate yourself with your GitHub account. After the authentication, your repositories will appear below from which you can select one.
+								</p>
+
+							</div>
+							<div class="zc-row zc-authenticate">
+								<button id="github-authenticate-btn" class="zc-btn zc-btn-small"> Authenticate </button>
+							</div>
+
+
+
+
+						</div> 
+						<div id="github-project-list">
+							<div class="zc-project-search"> 
+								<input class="zc-input" type="text" value="" placeholder="Search"/>
+							</div>    
+							<div class="zc-project-list">
+								<div class="zc-row">
+									<span class="icon"><svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> GPS-soln</span>
+										<span id="zc-clone-url-1" class="zc-project-url"> https://github.com/ayyasami/GPS-soln.git</span>
+									</span>
+									<button id="zc-clone-btn-1"class="zc-btn zc-btn-small"> Select </button>
+								</div>    
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> c-projects</span>
+										<span id="zc-clone-url-2" class="zc-project-url"> https://github.com/ayyasami/c-projects/webserver/apache/webapps/bin/office/docs/cprojects.git</span>
+									</span>
+									<button id="zc-clone-btn-2" class="zc-btn zc-btn-small"> Select </button>
+								</div>    
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> Docs</span>
+										<span id="zc-clone-url-3" class="zc-project-url"> https://github.com/ayyasami/Docs.git</span>
+									</span>
+									<button id="zc-clone-btn-3" class="zc-btn zc-btn-small"> Select </button>
+								</div> 
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> Docs</span>
+										<span id="zc-clone-url-3" class="zc-project-url"> https://github.com/ayyasami/Docs.git</span>
+									</span>
+									<button id="zc-clone-btn-3" class="zc-btn zc-btn-small"> Select </button>
+								</div> 
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> Docs</span>
+										<span id="zc-clone-url-3" class="zc-project-url"> https://github.com/ayyasami/Docs.git</span>
+									</span>
+									<button id="zc-clone-btn-3" class="zc-btn zc-btn-small"> Select </button>
+								</div>    
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> Docs</span>
+										<span id="zc-clone-url-3" class="zc-project-url"> https://github.com/ayyasami/Docs.git</span>
+									</span>
+									<button id="zc-clone-btn-3" class="zc-btn zc-btn-small"> Select </button>
+								</div>
+								<div class="zc-row">
+									<span class="icon"> <svg> <use xlink:href="#svg-gitrepositories-icon"> </use> </svg> </span>
+									<span class="zc-project">
+										<span class="zc-project-name"> Docs</span>
+										<span id="zc-clone-url-3" class="zc-project-url"> https://github.com/ayyasami/Docs.git</span>
+									</span>
+									<button id="zc-clone-btn-3" class="zc-btn zc-btn-small"> Select </button>
+								</div>    
+
+								<!--
+<div class="zc-form-wrap">
+<div class="zc-row"> 
+<div class="zc-field inline">
+<input id="github-public-1" type="text" placeholder="Others Public URL" class="zc-input"> 
+<button id="zc-github-clone-btn-1" class="zc-btn zc-btn-small"> Clone </button>
+</div>
+<div id="zc-github-clone-error-1" class="zc-field inline zc-hint-wrap" style="display:none">
+<label class="zc-hint">Please enter public URL.</label>
+</div>
+</div>
+</div>
+-->
+							</div>  
+						</div>
+						<div class="zc-seperator"> <span> or </span></div>
+						<div class="zc-public-url zc-form-wrap">
+							<div class="zc-row"> 
+								<div class="zc-field inline">
+									<input id="github-public" type="text" placeholder="Copy-paste a public GitHub URL" class="zc-input"> 
+									<button id="zc-github-clone-btn" class="zc-btn zc-btn-small"> Done </button>
+								</div>
+								<div id="zc-github-clone-error" class="zc-field inline zc-hint-wrap" style="display:none">
+									<label class="zc-hint">Enter public URL.</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="bitbucket" class="tab-pane fade">
+						<div id="bitbucket-authenticate">
+							<div class="zc-github-logo"> 
+								<svg> <use xlink:href="#svg-bitbucket-icon"> </use> </svg>
+							</div>
+							<div class="zc-github-content">
+								<p>
+									Authenticate yourself with your Bitbucket account. After the authentication, your repositories will appear below from which you can select one.
+
+							</div>
+							<div class="zc-row zc-authenticate">
+								<button class="zc-btn zc-btn-small"> Authenticate </button>
+							</div>
+
+
+						</div> 
+						<div class="zc-seperator"> <span> or</span> </div>
+						<div class="zc-form-wrap zc-public-url">
+							<div class="zc-row"> 
+								<div class="zc-field inline">
+									<input type="text" placeholder="Copy-paste a public Bitbucket URL" class="zc-input"> 
+									<button class="zc-btn zc-btn-small"> Done </button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="zohorepository" class="tab-pane fade">
+
+						<div class="zc-form-wrap">
+
+							<div class="zc-row"> 
+								<div class="zc-field inline">
+									<label> Repository URL:</label>
+									<input id="zr-clone-url" type="text" placeholder="Enter the URL of any Git or Hg repository
+																					  " class="zc-input">     
+								</div>
+								<div id="zr-cloneurl-error" class="zc-field inline zc-hint-wrap" style="display:none">
+									<label class="zc-hint">Enter public URL.</label>
+								</div>
+							</div>
+
+							<div class="zc-row zc-use-authori">
+								<div class="zc-field inline">
+									<div class="check-wrap">
+										<input id="zc-zoho-use-author" type="checkbox" value=" " class="zc-checkbox" tabindex="0"/>  
+										<label for="zc-zoho-use-author" class="zc-checkbox-clone">  Requires Authentication  </label>  
+									</div>
+								</div>
+							</div>
+
+							<div id="zc-rep-cred" class="zc-row rep-cred" style="display:none">
+								<div class="zc-field inline">
+									<label> </label>
+									<input id="zr-credentials-username" type="text" placeholder="User Name" class="zc-input no-margin"> 
+									<input id="zr-credentials-password" type="password" placeholder="Password" class="zc-input"> 
+								</div> 
+								<div id="zr-credentials-error-msg" class="zc-field inline zc-hint-wrap" style="display:none">
+									<label class="zc-hint zc-error-msg">You entered an incorrect user name or password.</label>
+								</div>
+							</div>
+
+							<div class="zc-row">
+								<div class="zc-row zc-btn-wrap">
+									<button id="clone-zoho-repository" class="zc-btn"> Done </button>
+									<button  id="cancel-zoho-repository" class="zc-btn zc-secondary"> Cancel </button>
+								</div>    
+							</div>    
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>   
+		</div>    
+
+	<!-- PROJECT AVATAR LIST -->
+	<div id="zc-avatar-list" class="zc-avatar-list" tabindex="1">
+		<ul>
+			<li class="selected" title="avatar"> <span class="zc-avatar avatar-1"> </span>  </li>
+			<li title="Sales"> <span class="zc-avatar avatar-2"> </span>  </li>
+			<li title="eCommerce"> <span class="zc-avatar avatar-3"> </span>  </li>
+			<li title="Music"> <span class="zc-avatar avatar-4"> </span>  </li>
+			<li title="Help Desk, Support"> <span class="zc-avatar avatar-5"> </span>  </li>
+			<li title="Document Management">  <span class="zc-avatar avatar-6"> </span>  </li>
+			<li title="Security">  <span class="zc-avatar avatar-7"> </span>  </li>
+			<li title="Customer Relationship Management">  <span class="zc-avatar avatar-8"> </span>  </li>
+			<li title="Mobile">  <span class="zc-avatar avatar-9"> </span>  </li>
+			<li title="Cloud">  <span class="zc-avatar avatar-10"> </span>  </li>
+			<li title="Sales">  <span class="zc-avatar avatar-11"> </span>  </li>
+			<li title="Server">  <span class="zc-avatar avatar-12"> </span>  </li>
+			<li title="Insurance">  <span class="zc-avatar avatar-13"> </span>  </li>   
+			<li title="E-commerce">  <span class="zc-avatar avatar-14"> </span>  </li>
+			<li title="Human Resource">  <span class="zc-avatar avatar-15"> </span>  </li>
+			<li title="Bug Tracker">  <span class="zc-avatar avatar-16"> </span>  </li>
+			<li title="Security">  <span class="zc-avatar avatar-17"> </span>  </li>
+			<li title="E-commerce">  <span class="zc-avatar avatar-18"> </span>  </li>
+			<li title="Desktop">  <span class="zc-avatar avatar-19"> </span>  </li>
+			<li title="Campaign">  <span class="zc-avatar avatar-20"> </span>  </li>
+			<li title="Law">  <span class="zc-avatar avatar-21"> </span>  </li>
+			<li title="Travel, Transport"> <span class="zc-avatar avatar-22"> </span>  </li>
+			<li title="Social, Chat">  <span class="zc-avatar avatar-23"> </span>  </li>
+			<li title="Banking"> <span class="zc-avatar avatar-24"> </span>  </li>
+			<li title="Application">  <span class="zc-avatar avatar-25"> </span>  </li>
+			<li title="Health Care">  <span class="zc-avatar avatar-26"> </span>  </li>  
+			<li title="Music">  <span class="zc-avatar avatar-27"> </span>  </li>  
+			<li title="Sports">  <span class="zc-avatar avatar-28"> </span>  </li>  
+			<li title="Puzzles">  <span class="zc-avatar avatar-29"> </span>  </li>
+			<li title="Invoice">  <span class="zc-avatar avatar-30"> </span>  </li>
+
+		</ul>   
+
+
+
+
+		<div class="zc-file-upload">
+			<input type="file" id="zc-choose-avatar" class="zc-inputfile">
+			<label for="zc-choose-avatar"> Choose from Computer</label>
+		</div>
+
+
+
+
+
+
+
+
+	</div>  
+
+	<!-- PROJECT AVATAR LIST -->
+	<div id="zc-new-avatar-list" class="zc-avatar-list"  tabindex="2">
+		<ul>
+			<li class="selected" title="avatar"> <span class="zc-avatar avatar-1"> </span>  </li>
+			<li title="Sales"> <span class="zc-avatar avatar-2"> </span>  </li>
+			<li title="eCommerce"> <span class="zc-avatar avatar-3"> </span>  </li>
+			<li title="Music"> <span class="zc-avatar avatar-4"> </span>  </li>
+			<li title="Help Desk, Support"> <span class="zc-avatar avatar-5"> </span>  </li>
+			<li title="Document Management">  <span class="zc-avatar avatar-6"> </span>  </li>
+			<li title="Security">  <span class="zc-avatar avatar-7"> </span>  </li>
+			<li title="Customer Relationship Management">  <span class="zc-avatar avatar-8"> </span>  </li>
+			<li title="Mobile">  <span class="zc-avatar avatar-9"> </span>  </li>
+			<li title="Cloud">  <span class="zc-avatar avatar-10"> </span>  </li>
+			<li title="Sales">  <span class="zc-avatar avatar-11"> </span>  </li>
+			<li title="Server">  <span class="zc-avatar avatar-12"> </span>  </li>
+			<li title="Insurance">  <span class="zc-avatar avatar-13"> </span>  </li>   
+			<li title="E-commerce">  <span class="zc-avatar avatar-14"> </span>  </li>
+			<li title="Human Resource">  <span class="zc-avatar avatar-15"> </span>  </li>
+			<li title="Bug Tracker">  <span class="zc-avatar avatar-16"> </span>  </li>
+			<li title="Security">  <span class="zc-avatar avatar-17"> </span>  </li>
+			<li title="E-commerce">  <span class="zc-avatar avatar-18"> </span>  </li>
+			<li title="Desktop">  <span class="zc-avatar avatar-19"> </span>  </li>
+			<li title="Campaign">  <span class="zc-avatar avatar-20"> </span>  </li>
+			<li title="Law">  <span class="zc-avatar avatar-21"> </span>  </li>
+			<li title="Travel, Transport"> <span class="zc-avatar avatar-22"> </span>  </li>
+			<li title="Social, Chat">  <span class="zc-avatar avatar-23"> </span>  </li>
+			<li title="Banking"> <span class="zc-avatar avatar-24"> </span>  </li>
+			<li title="Application">  <span class="zc-avatar avatar-25"> </span>  </li>
+			<li title="Health Care">  <span class="zc-avatar avatar-26"> </span>  </li>  
+			<li title="Music">  <span class="zc-avatar avatar-27"> </span>  </li>  
+			<li title="Sports">  <span class="zc-avatar avatar-28"> </span>  </li>  
+			<li title="Puzzles">  <span class="zc-avatar avatar-29"> </span>  </li>
+			<li title="Invoice">  <span class="zc-avatar avatar-30"> </span>  </li>
+		</ul>   
+
+		<div class="zc-file-upload">
+			<input type="file" id="zc-choose-avatar-1" class="zc-inputfile">
+			<label for="zc-choose-avatar-1"> Choose from Computer</label>
+		</div>
+
+	</div>  
+
+	<!-- POPOVERS -->
+	<div id="zc-project-config-help" class="zc-popover zc-popover-top" style="display:none"> 
+		<p>Project Configuration captures database schema name (so as to create tables defined in your data dictionary file), details of dependent services (e.g., IAM), and any other such mandatory info.  </p>   
+	</div>
+
+	<div id="zc-popover-tomcat" class="zc-popover zc-popover-top"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Java </p> 
+		<p class="zc-enviro-info"> <span>Server:</span> Tomcat</p> 
+		<p class="zc-enviro-info"> <span>Database:</span> Postgress</p>
+	</div> 
+
+	<div id="zc-popover-rails" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Ruby </p> 
+		<p class="zc-enviro-info"> <span>Server:</span> Rails</p> 
+		<p class="zc-enviro-info"> <span>Database:</span> SQLite</p>
+	</div>
+
+	<div id="zc-popover-django" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Python </p> 
+		<p class="zc-enviro-info"> <span>Server:</span> Django</p> 
+		<p class="zc-enviro-info"> <span>Database:</span> Postgres </p>
+	</div>
+
+	<div id="zc-popover-go" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Go </p> 
+		<p class="zc-enviro-info"> <span>Library:</span> Ant 1.8.1</p> 
+	</div> 
+
+	<div id="zc-popover-java" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Java </p> 
+		<p class="zc-enviro-info"> <span>Library:</span> Ant 1.8.1</p> 
+	</div> 
+
+	<div id="zc-popover-ruby" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Ruby </p> 
+		<p class="zc-enviro-info"> <span>Library:</span> Ant 1.8.1</p> 
+	</div>
+
+	<div id="zc-popover-python" class="zc-popover zc-popover-top" style="display:none"> 
+		<p class="zc-enviro-info"> <span>Language: </span> Python </p> 
+		<p class="zc-enviro-info"> <span>Library:</span> Ant 1.8.1</p> 
+	</div> 
+
+	<div id="zc-rep-info" class="zc-popover zc-popover-top" style="display: none;"> 
+		<p>You can clone path from your Cloud Repository such as GitHub, BitBucket, etc., and access the files within Zoho Code’s IDE. </p> <p> Also, you can perform normal repository operations such as Push, Pull, Branch, etc.  </p>   
+	</div>   
+
+
+
+
+	<!----------------------------- HEADER ----------------------------->    
+	<div class="header"> 
+		<div class="ztb-topband"></div>    
+	</div>
+
+	<!----------------------------- SIDEBAR ---------------------------->
+	<div class="sidebar">  
+		<div class="logo"><img src="images/logo.png"> </div>
+		<ul class="sidebar-nav">
+
+
+  <li class="selected">
+                    <a href="#" id="zc-new-project"> 
+                        <span class="icon nav-icon"> <svg class="green_newpro"> <use xlink:href="#svg-new-icon"> </use> </svg>  </span>
+                        New Project 
+                    </a>
+                </li>
+				
+             
+                <li>
+                    <a href="index.html"> 
+                        <span class="icon nav-icon"> <svg class="yellow_projects"> <use xlink:href="#svg-project-icon"> </use> </svg>  </span>
+                        Projects 
+                    </a>
+                </li>
+
+                <li> 
+                    <a href="repositories.html">
+                        <span class="icon nav-icon"> <svg class="blue_repos"> <use xlink:href="#svg-repositories-icon"> </use> </svg> </span>
+                        Zoho Repositories  
+                    </a>
+                </li>
+				
+				
+				<li class="zc-setting"> 
+					<a href="repositories.html" class="sidehead">ADMINISTRATION </a>
+				</li>
+                
+					<li> 
+					<a href="repositories.html">
+						<span class="icon nav-icon"> <svg class="pink"> <use xlink:href="#svg-settings-icon"> </use> </svg> </span>
+						Portal Info 
+					</a>
+				</li>
+                
+                <li> 
+					<a href="repositories.html">
+						<span class="icon nav-icon"> <svg class="voil_user"> <use xlink:href="#svg-settings-icon"> </use> </svg> </span>
+						Users 
+					</a>
+				</li>
+                
+                <li> 
+					<a href="repositories.html">
+						<span class="icon nav-icon"> <svg class="green"> <use xlink:href="#svg-settings-icon"> </use> </svg> </span>
+						Reports 
+					</a>
+				</li>
+                
+                <li> 
+					<a href="repositories.html">
+						<span class="icon nav-icon"> <svg class="blue_repos"> <use xlink:href="#svg-settings-icon"> </use> </svg> </span>
+						Subscription 
+					</a>
+				</li>
+                
+                <li> 
+					<a href="repositories.html">
+						<span class="icon nav-icon"> <svg class="manage_env"> <use xlink:href="#svg-settings-icon"> </use> </svg> </span>
+						Manage Environment 
+					</a>
+				</li>
+		</ul>    
+	</div>
+	<!----------------------------- ARTICLE ---------------------------->
+	<div class="article">
+		<div class="zc-topbar"> 
+
+			<ul class="ide-user-account shrink" style=""> 
+				<li class="ide-user-info">
+					<span class="ide-user-pic">   <img src="images/user-img.jpg">   </span>
+					<div class="ide-info-wrap">
+						<span class="ide-user-name"> James Anderson </span>
+						<span class="ide-user-mail"> Jamesanderson@zohocorp.com </span>
+					</div>
+				</li>
+				<li class="seperator"> </li>
+				<li>  My Accounts </li>
+				<li>  My Subscription </li>
+				<li>  My Portals </li>
+				<li class="seperator"> </li>
+				<li>  Sign Out </li>
+
+
+
+			</ul>
+			<ul class="ide-toolbar ide-help zc-fright"> 
+
+				<li class="ide-menu"> 
+					<button  class="zc-btn icon" title="Notifications">
+						<i class="icon">  <svg class="zc-grey"> <use xlink:href="#svg-notification-icon"> </use> </svg> </i> 
+					</button>
+				</li>
+
+				<li class="ide-menu"> 
+					<button id="zc-help-btn" class="zc-btn icon" title="Help">
+						<i class="icon">  <svg class="zc-grey"> <use xlink:href="#svg-help-icon"> </use> </svg> </i> 
+					</button>
+				</li>
+			</ul>
+
+		</div>
+		<div class="zc-tab-wrap">
+			<ul class="nav nav-tabs" id="myTab">
+				<li><a data-toggle="tab" href="#sectionA">Develop an Existing Zoho Service</a></li>
+				<li id="zc-create-new-project"><a data-toggle="tab" href="#sectionB">Create New Project</a></li>
+
+			</ul>
+			<div class="tab-content">
+				<div id="sectionA" class="tab-pane fade in active">
+
+					<div class="zc-form-wrap">
+
+						<div class="zc-row zc-fields-title">
+							<div class="zc-field inline">
+								<label> Build Details  </label>
+							</div>
+						</div>
+
+						<div class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Service:  </label>
+								<select id="zc-required-service" data-placeholder="Choose your service" class="chosen-select-no-single" style="width:310px;">              <optgroup label="Choose your service">
+									<option value=""></option>
+									<option value="ONEZOHO">ONEZOHO</option>
+									<option value="ZOHOPEOPLE_2_0">ZOHOPEOPLE_2_0</option>
+									<option value="ZOHOCRM">ZOHOCRM</option>
+									<option value="ZOHOPROJECTS">ZOHOPROJECTS</option>
+									<option value="SDPLIVE">SDPLIVE</option>
+									<option value="ZOHOMEETING">ZOHOMEETING</option>
+									<option value="ZOHOCALENDAR">ZOHOCALENDAR</option>
+									<option value="ZOHOACCOUNTS">ZOHOACCOUNTS</option>
+									<option value="WEBMONITOR">WEBMONITOR</option>
+									<option value="ZOHOCAMPAIGN">ZOHOCAMPAIGN</option>
+									<option value="ZOHOLITECONTACTS">ZOHOLITECONTACTS</option>
+									<option value="ZOHOSOCIAL">ZOHOSOCIAL</option>
+									<option value="ZOHOCHATWMS">ZOHOCHATWMS</option>
+									<option value="ZOHOPULSE">ZOHOPULSE</option>
+									</optgroup>
+								</select>
+							</div> </div>
+
+						<div class="zc-row"> <div class="zc-field inline">
+							<label> Build URL: </label>
+							<select  id="zc-required-build" data-placeholder="Choose the Build URL to test and run your project
+																			  " class="chosen-select-no-single" style="width:310px;">
+								<optgroup label="Choose the Build URL to test and run your project">
+									<option value=""></option>
+									<option value="http://zoho-build3/products/mycomputer/default/Mar_26_2016/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/default/Mar_26_2016/ZohoMeeting_Client.zip</option>
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_25_2016_1/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_25_2016_1/ZohoMeeting_Client.zip</option>
+
+									<option value="http://zoho-build3/products/mycomputer/default/Mar_25_2016/ZohoMeeting_Client.zip"> http://zoho-build3/products/mycomputer/default/Mar_25_2016/ZohoMeeting_Client.zip</option>
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_3/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_3/ZohoMeeting_Client.zip</option>
+
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_2/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_2/ZohoMeeting_Client.zip</option>
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_1/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016_1/ZohoMeeting_Client.zip</option>
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_24_2016/ZohoMeeting_Client.zip</option>
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_23_2016_6/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_23_2016_6/ZohoMeeting_Client.zip</option>
+
+									<option value="http://zoho-build3/products/mycomputer/webhost/default/Mar_23_2016_3/ZohoMeeting_Client.zip">http://zoho-build3/products/mycomputer/webhost/default/Mar_23_2016_3/ZohoMeeting_Client.zip</option>
+								</optgroup>
+							</select>
+							</div> </div>
+
+						<div class="zc-row"> <div class="zc-field inline">
+							<label> Working Branch: </label>
+							<select  id="zc-required-branch" data-placeholder="Choose the branch to clone and develop" class="chosen-select-no-single" style="width:310px;">
+								<optgroup label="Choose the branch to clone and develop">
+									<option value=""></option>
+									<option value="ZOHOCRM_CHANDRU_BRANCH">ZOHOCRM_CHANDRU_BRANCH</option>
+									<option value="ZOHOCRM_CUSTOM_BUTTON_BRANCH">ZOHOCRM_CUSTOM_BUTTON_BRANCH</option>
+									<option value="ZOHOCRM_CUSTOM_BUTTON_BRANCH_REVIEWED">ZOHOCRM_CUSTOM_BUTTON_BRANCH_REVIEWED</option>
+									<option value="ZOHOCRM_INVOICEBOOK_INTEGRATION_BRANCH">ZOHOCRM_INVOICEBOOK_INTEGRATION_BRANCH</option>
+									<option value="ZOHOCRM_NEW_SOCIAL_BRANCH">ZOHOCRM_NEW_SOCIAL_BRANCH</option>
+									<option value="ZOHOCRM_REVIEWED">ZOHOCRM_REVIEWED</option>
+									<option value="ZOHOCRM_USER_BALARAMAND_BRANCH"> ZOHOCRM_USER_BALARAMAND_BRANCH</option>
+									<option value="ZOHOCRM_USER_BALARAMAND_BRANCH_REVIEWED">ZOHOCRM_USER_BALARAMAND_BRANCH_REVIEWED</option>
+									<option value="ZOHOCRM_USER_JAYANTHI_BRANCH">ZOHOCRM_USER_JAYANTHI_BRANCH</option>
+									<option value="ZOHOCRM_USER_PRATHEESH_BRANCH">ZOHOCRM_USER_PRATHEESH_BRANCH</option>
+									<option value="ZOHOCRM_VIJAYAKRISHNA_BRANCH">ZOHOCRM_VIJAYAKRISHNA_BRANCH</option>
+									<option value="ZOHOCRM_USER_YUVARAJN_BRANCH">ZOHOCRM_USER_YUVARAJN_BRANCH</option>
+									<option value="ZOHOCRM_PLATFORM_PLUGIN_BRANCH">ZOHOCRM_PLATFORM_PLUGIN_BRANCH</option>
+									<option value="ZOHOCRM_INVOICEBOOK_INTEGRATION_BRANCH_REVIEWED">ZOHOCRM_INVOICEBOOK_INTEGRATION_BRANCH_REVIEWED</option>
+									<option value="ZOHOCRM_DASHBOARD_BRANCH">ZOHOCRM_DASHBOARD_BRANCH</option>
+								</optgroup>
+							</select>
+							</div> </div>
+
+						<div class="zc-row rep-cred"> <div class="zc-field inline">
+							<label> Repository Credentials: </label>
+							<input id="rep-username" type="text" placeholder="User Name" class="zc-input no-margin"> 
+							<input id="rep-password" type="password" placeholder="Password" class="zc-input"> 
+							</div>
+							<div id="zc-error-msg" class="zc-field inline zc-hint-wrap" style="display:none">
+								<label class="zc-hint zc-error-msg">You entered an incorrect user name or password.</label>
+							</div>     
+
+						</div>
+
+						<div id="project-config-title"class="zc-row zc-fields-title zc-project-config">
+							<div class="zc-field inline">
+								<label>Project Configuration <span id="zc-pconfig-help" class="zc-projectconfig-help icon-18">
+									<svg class="zc-blue"> <use  xlink:href="#svg-help-icon"> </use> </svg>
+									</span></label>
+							</div>
+							<div class="zc-alert zc-info-msg"> 
+								<p class="zc-title"> Server running ports: </p>
+								<p> <span>HTTP:</span> 8080  </p>
+								<p> <span>HTTPS:</span> 8443 </p>
+							</div>
+						</div>
+
+						<div id="schema" class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Schema Name: </label>
+								<input id="zc-schema-name" type="text" placeholder="" class="zc-input">     
+							</div>
+							<div id="zc-schema-required" class="zc-field inline zc-hint-wrap" style="display:none">
+								<label class="zc-hint">Enter schema name.</label>
+							</div>   
+							<div class="zc-field inline zc-hint-wrap">
+								<label class="zc-hint">Enter a Schema Name for your project to create the tables defined in your data dictionary file.</label></div>   
+
+						</div>  
+
+						<div id="service-name" class="zc-row" > 
+							<div class="zc-field inline">
+								<label> IAM Server: </label>
+								<input id="zc-service-name" type="text" placeholder="" class="zc-input">      
+							</div>
+							<div id="zc-servicename-required" class="zc-field inline zc-hint-wrap" style="display:none">
+								<label class="zc-hint">Enter IAM server </label>
+							</div>   
+
+							<div class="zc-field inline zc-hint-wrap">
+								<label class="zc-hint">Enter the URL of the IAM Server that this project refers.</label></div>   
+						</div> 
+
+						<div id="service-url" class="zc-row"> 
+							<div class="zc-field inline">
+								<label> IAM Service Name: </label>
+								<input id="zc-service-url" type="text" placeholder="" class="zc-input">     
+							</div>
+							<div id="zc-serviceurl-required" class="zc-field inline zc-hint-wrap" style="display:none">
+								<label class="zc-hint">Enter IAM service name.</label>
+							</div>  
+							<div class="zc-field inline zc-hint-wrap">
+								<label class="zc-hint">Enter the IAM Service Name you’ve registered in the above entered IAM Server.</label></div>   
+						</div>  
+
+						<div  class="zc-row zc-fields-title">
+							<div class="zc-field inline">
+								<label>Project Details </label>
+							</div>
+
+						</div>
+
+
+						<div class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Project Name: </label>
+								<input id="zc-project-name" type="text" placeholder="" class="zc-input">     
+							</div>
+							<div id="zc-project-error" class="zc-field inline zc-hint-wrap">
+								<label class="zc-hint">Can contain alphabets, numbers, hyphens (-), and underscores (_).</label>
+							</div>   
+						</div>
+
+						<div class="zc-row"> 
+							<div class="zc-field inline valign-top">
+								<label> Description <span class="zc-hint">(optional):</span></label>
+								<textarea id="ezs-description" placeholder=""></textarea>    
+							</div> 
+						</div>
+
+						<div class="zc-row no-margin"> 
+							<div class="zc-field inline">
+								<label> Project Avatar: </label>
+								<span id="zc-change-avatar" class="zc-project-avatar" tabindex="0">
+									<span class="zc-avatar avatar-1"></span>
+									<span id="zc-change-avatar" class="zc-avatar-change">Choose</span> 
+								</span> 
+
+							</div> 
+						</div>
+
+
+						<div class="zc-row">
+							<div class="zc-btn-wrap">
+								<button id="create-project-btn" class="zc-btn zc-gradient"> Create </button>
+								<button id="cancel-ezs-project-btn" class="zc-btn zc-secondary"> Cancel </button>
+							</div>  
+						</div>
+
+
+					</div>
+
+				</div>
+				<div id="sectionB" class="tab-pane fade">
+
+					<div class="zc-form-wrap">
+
+						<div class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Project Name: </label>
+								<input id="zc-create-project-name" type="text" placeholder="" class="zc-input" >     
+							</div>
+							<div id="zc-create-project-error" class="zc-field inline  zc-hint-wrap">
+								<label class="zc-hint">Can contain alphabets, numbers, hyphens (-), and underscores (_).</label>
+							</div>   
+						</div>
+
+						<div class="zc-row"> 
+							<div class="zc-field inline valign-top">
+								<label> Description <span class="zc-hint">(optional):</span> </label>
+								<textarea id="cnp-description" placeholder=""></textarea>     
+							</div> 
+						</div>
+
+						<div class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Project Avatar: </label>
+								<span id="zc-new-change-avatar" class="zc-project-avatar" tabindex="0">
+									<span class="zc-avatar avatar-1"></span>
+									<span class="zc-avatar-change">Choose</span> 
+								</span> 
+
+							</div> 
+						</div>
+
+						<div class="zc-row"> 
+							<div class="zc-field inline">
+								<label> Development Environment:     </label>
+								<button id='create-new-environment' class='zc-btn zc-btn-small zc-grey'>Choose... </button> 
+								<div id="zc-newenviro-error-msg" class="zc-field inline zc-hint-wrap" style="display: none;">
+									<label class="zc-hint zc-error-msg">Choose environment.</label>
+								</div>
+								<div id="zc-selected-enviro" class="zc-selected-envir"> 
+									<div class="zc-enviro-wrap">
+										<div class="zc-envir-logo-wrap">
+											<span class="zc-enviro-logo"> 
+												<span class="enviro-logo django-logo"> </span>
+											</span>
+										</div>   
+										<div class="zc-envir-desc"> 
+											<span id="zc-change-enviro" class="zc-change-url"> 
+												<span class="icon">
+													<svg class="zc-green"> <use xlink:href="#svg-change-icon"> </use> </svg>
+												</span>
+											</span>
+											<p> <span class="zc-title">Name: </span> <span id="zc-enviro-name">  Django</span></p>
+											<p class="zc-package-desc"> <span class="zc-title">Packages:</span> <span id="zc-enviro-desc"> Python 3, Postgres, django CMS, 
+												Open edX, Pinax, Pip and Virtualenv 15.0.0. </span></p>
+										</div>
+									</div>
+
+								</div> 
+
+
+
+
+
+
+
+							</div>
+						</div>
+
+						<div class="zc-row zc-repository-url">
+							<div class="zc-field inline valign-top">
+								<label>Source Code: </label>
+								<div class="zc-radio-wrap">
+
+
+
+									<div class="zc-radio-field">  
+										<input id="develop-from-scrach" type="radio" name="rep"  class="zc-radio" checked="">
+										<label for="develop-from-scrach" class="zc-radio-clone"> Develop from Scratch  </label>
+									</div>
+									<div class="zc-radio-field zc-use-cloud">  
+										<input id="cloud-repository" type="radio" name="rep" class="zc-radio">
+										<label for="cloud-repository" class="zc-radio-clone"> Use a Cloud Repository </label>
+									</div>
+									<span id="zc-cloud-rep-info" class="zc-cloud-info icon-18">
+
+										<svg class="zc-blue"> <use xlink:href="#svg-info-icon"> </use> </svg>
+									</span>
+									<button id="choose-repository" class="zc-btn zc-btn-small zc-grey" style="display:none">Choose... </button>   
+								</div>
+
+								<div id="zc-repository-url" style="display:none">
+
+									<div class="zc-selected-repos">
+										<span class="zc-repos-logo"> 
+											<span class="icon">   <svg class="zc-white"> <use xlink:href="#svg-github-icon"> </use> </svg></span>
+
+										</span>
+										<span class="zc-repos-url">
+											<span id="zc-change-url" class="zc-change-url"> 
+												<span class="icon">
+													<svg class="zc-green"> <use xlink:href="#svg-change-icon"> </use> </svg>
+												</span>
+											</span>
+											<p> <span class="zc-title">Repository URL:</span></p>
+											<p class="zc-selected-url">
+												<a href="#">  https://github.com/ayyasami/c-projects.git</a>
+											</p>
+										</span>
+									</div>
+
+								</div>
+							</div>
+
+
+						</div>    
+
+
+
+						<div class="zc-row">
+							<div class="zc-btn-wrap">
+								<button id="create-new-project-btn" class="zc-btn zc-gradient"> Create </button>
+								<button id="cancel-new-project-btn" class="zc-btn zc-secondary"> Cancel </button>
+							</div>
+						</div>    
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+
+	<!-- HELP MENU -->
+	<ul id="help-menu" class="icon-custom-menu" style="display:none;" data='{"componentOptions": {"type":"text_only"}}'>
+
+		<li  mtype="custom"> 
+			<span class=" zc-list-text ">Help</span>
+		</li>
+
+		<li  mtype="custom"> 
+
+			<span class=" zc-list-text ">FAQs</span>
+		</li>
+
+		<li mtype="custom"> 
+			<span class=" zc-list-text ">What's New</span>
+		</li>
+		
+
+		<li mtype="custom"> 
+			<span class=" zc-list-text ">Take a Tour</span>
+		</li>
+
+		<li mtype="separator"></li>
+
+		<li mtype="custom"> 
+			<span class=" zc-list-text ">Keyboard Shortcuts</span>
+		</li>
+
+		<li mtype="separator"></li>
+
+		<li mtype="custom"> 
+			<span class=" zc-list-text ">About Zoho Code</span>
+		</li>
+		<li  mtype="custom"> 
+			<span class=" zc-list-text ">Blogs</span>
+		</li>
+		<li mtype="separator"></li>
+		<li mtype="custom"> 
+			<span class=" zc-list-text ">Forms</span>
+		</li>
+
+		<li  mtype="custom"> 
+			<span class=" zc-list-text ">Support</span>
+		</li>
+
+	</ul>
+
+
+
+
+	<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>-->
+	<script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+	<script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var config = {
+			'.chosen-select'           : {},
+			'.chosen-select-deselect'  : {allow_single_deselect:true},
+			'.chosen-select-no-single' : {disable_search_threshold:10},
+			'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+			'.chosen-select-width'     : {width:"95%"}
+		}
+		for (var selector in config) {
+			$(selector).chosen(config[selector]);
+		}
+
+		$(document).ready(function(){ 
+			$("#myTab li:eq(0) a").tab('show');
+			$("#chooseCloud li:eq(0) a").tab('show');        
+		});
+
+
+
+	</script>
+	</body>
+</html>
